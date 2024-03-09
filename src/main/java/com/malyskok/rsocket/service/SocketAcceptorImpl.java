@@ -15,6 +15,7 @@ import reactor.core.publisher.Mono;
 public class SocketAcceptorImpl implements SocketAcceptor {
     @Override
     public Mono<RSocket> accept(ConnectionSetupPayload connectionSetupPayload, RSocket rSocket) {
+        System.out.println("SocketAcceptorImpl - accept");
         return Mono.fromCallable(MathService::new);
     }
 }
